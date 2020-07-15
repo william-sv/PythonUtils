@@ -4,7 +4,7 @@
 @Author    : William.sv@icloud.com
 @File      : mergeFile.py
 @ Software : PyCharm
-@Desc      :
+@Desc      : 
 """
 
 import os
@@ -20,6 +20,7 @@ def csv_merge_convert_xlsx(file_path,file_name):
     lines_data = []
     csv_files = os.listdir(file_path)
     for file in csv_files:
+        # 该地址为Windows上的地址，如需在其他系统执行，请改为相应的地址格式
         with open(file_path + '\\' + file, 'r', newline='',encoding='utf-8') as csv_file:
             lines = csv.reader(csv_file)
             for line in lines:
